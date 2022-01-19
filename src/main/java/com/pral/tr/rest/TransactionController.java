@@ -24,7 +24,7 @@ public class TransactionController {
 	}
 	
 	@PostMapping("/api/transaction/performTransaction")
-	public void performTransaction(@RequestBody String transactionType) {
-		transactionMasterEntityService.performTransaction(transactionType);
+	public TransactionMasterEntity performTransaction(@RequestBody String transactionType) {
+		return transactionMasterEntityService.performTransaction(transactionType);
 	}
 }

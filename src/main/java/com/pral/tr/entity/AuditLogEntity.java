@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 @Entity
@@ -26,7 +27,7 @@ public class AuditLogEntity {
 	private String auditOperation;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@CreatedDate
+	@CreationTimestamp
 	@Column(name = "AUDIT_LOG_TIME")
 	private Date auditLogTime;
 

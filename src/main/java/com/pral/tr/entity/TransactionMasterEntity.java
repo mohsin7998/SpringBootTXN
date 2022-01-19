@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 @Entity
@@ -29,7 +30,7 @@ public class TransactionMasterEntity {
 	private String initiatedBy;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@CreatedDate
+	@CreationTimestamp
 	@Column(name = "transactionTime")
 	private Date transactionTime;
 
